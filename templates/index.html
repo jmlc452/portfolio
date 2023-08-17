@@ -1,0 +1,310 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Portfolio/Resume Theme for Developers</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boootstrap Portfolio/Resume Theme for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    
+    <!-- FontAwesome JS -->
+    <script defer src="{% static 'assets/fontawesome/js/all.js' %}"></script>
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">  
+    
+    <!-- github calendar css -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/github-calendar/dist/github-calendar-responsive.css' %}">
+    <!-- github activity css -->  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">  
+    <link rel="stylesheet" href="{% static 'assets/plugins/github-activity/src/github-activity.css' %}">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    
+</head> 
+
+<body>
+    <!-- ******HEADER****** --> 
+    <header class="header">
+        <div class="container">     
+	        <div class="row align-items-center">
+			    <div class="col">         
+		            <img class="profile-image img-fluid float-start rounded-circle" src="{% static 'assets/images/perfil.jpg' %}" alt="profile image" style="height: 180px;" />
+		            <div class="profile-content">
+		                <h1 class="name">Jorge Medina</h1>
+		                <h2 class="desc">Web backend Developer</h2>   
+		                <ul class="social list-inline">
+		                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/jorge-medina-contreras/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+		                    <li class="list-inline-item"><a href="https://github.com/jmlc452" target="_blank"><i class="fab fa-github-alt"></i></a></li>    
+		                </ul> 
+		            </div><!--//profile-->
+			    </div><!--//col-->
+	            <div class="col-12 col-md-auto" >
+	                <a class="btn btn-cta-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-paper-plane"></i> Contacto</a>        
+	            </div><!--//col-->
+	        </div><!--//row-->         
+        </div><!--//container-->
+    </header><!--//header-->
+    <!-- Contact Start -->
+<div id="collapseExample" class="collapse ">
+    <div class="container-sm  contact-page py-5 px-lg-0">
+        <div class="row g-5 mx-lg-0">
+            <div class="col-md-12 contact-form wow fadeIn " data-wow-delay="0.1s">
+                 <div class="bg-light p-4 shadow-lg rounded">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="row g-3 ">
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name">
+                                    <label for="name">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email">
+                                    <label for="email">Correo</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="phone" placeholder="Subject">
+                                    <label for="subject">Telefono</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                    <label for="subject">Asunto</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" name="message" style="height: 100px"></textarea>
+                                    <label for="message">Mensaje</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <button class="btn btn-cta-primary w-100 py-3" type="submit">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+    
+    <div class="container sections-wrapper py-5">
+        <div class="row">
+            <div class="primary col-lg-8 col-12">
+                <section class="about section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Introducción</h2>
+                        <div class="content">
+                            <p>
+                                
+¡Saludos! Soy Jorge Medina, un desarrollador web especializado en Python y Django con experiencia en la creación de aplicaciones web robustas y de alto rendimiento. Mi pasión por la programación me impulsa a diseñar soluciones elegantes y escalables que satisfagan las necesidades del cliente. Con un enfoque meticuloso en la calidad del código y la experiencia del usuario, estoy comprometido a entregar resultados excepcionales. Si estás buscando un colaborador técnico apasionado y dedicado, estaré encantado de conectarte.
+                            </p>                         
+                        </div><!--//content-->
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+    
+               <section class="latest section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Poyectos</h2>
+                        <div class="content">    
+                                               
+                            <div class="item featured text-center">
+                                
+                                <div class="featured-image has-ribbon">
+                                    <a href="https://myevastore.com/" target="_blank">
+                                    <img class="img-fluid project-image rounded shadow-sm" src="{% static 'assets/images/projects/evas.png' %}" alt="project name" />
+                                    </a>
+                                    {% comment %} <div class="ribbon">
+                                        <div class="text">New</div>
+                                    </div> {% endcomment %}
+                                </div>
+                                
+                                <h3 class="title mb-3"><a href="https://myevastore.com/" target="_blank">Eva's -  Desarrollo de una Plataforma de Venta de Maquillaje con Django</a></h3>
+                                    
+                                <div class="desc text-start">                                    
+                                    <p>Este proyecto implicó la implementación de un sistema de gestión de productos intuitivo y eficiente, garantizando que los clientes pudieran explorar una amplia gama de productos de belleza de manera fluida. Además, diseñé un proceso de registro y autenticación seguro para que los usuarios puedan acceder a sus perfiles personalizados y realizar un seguimiento de sus compras. La integración de pasarelas de pago confiables aseguró una experiencia de compra sin complicaciones. Me enorgullece haber aplicado los principios de desarrollo web modernos y las mejores prácticas de seguridad en este proyecto, contribuyendo así a la creación de una plataforma atractiva y funcional para los amantes del maquillaje.</p>
+                                </div><!--//desc-->         
+                                <a class="btn btn-cta-secondary" href="https://myevastore.com/" target="_blank"><i class="fas fa-thumbs-up"></i> Ver</a>                 
+                            </div><!--//item-->
+
+
+                            <hr class="divider" />
+
+                            <div class="item featured text-center">
+                                
+                                <div class="featured-image has-ribbon">
+                                    <a href="https://hgiraud.onrender.com" target="_blank">
+                                    <img class="img-fluid project-image rounded shadow-sm" src="{% static 'assets/images/projects/giraud.png' %}" alt="project name" />
+                                    </a>
+                            
+                                </div>
+                                
+                                <h3 class="title mb-3"><a href="https://hgiraud.onrender.com" target="_blank">Grupo Giraud - Renovacion de la página Web</a></h3>
+                                    
+                                <div class="desc text-start">                                    
+                                    <p>Realicé un proyecto personal de renovación de una página web existente para una empresa de aduanas y almacenes. Mi enfoque se centró en mejorar la interfaz y la experiencia del usuario, utilizando tecnologías modernas para optimizar el rendimiento y la usabilidad. El resultado fue una plataforma web renovada y eficiente que refleja la identidad de la empresa de manera efectiva.</p>
+                                </div><!--//desc-->         
+                                <a class="btn btn-cta-secondary" href="https://hgiraud.onrender.com" target="_blank"><i class="fas fa-thumbs-up"></i> Ver</a>                 
+                            </div><!--//item-->
+
+
+                            <hr class="divider" />
+
+                            <div class="item featured text-center">
+                                
+                                <div class="featured-image has-ribbon">
+                                    <a href="https://echopper.onrender.com/" target="_blank">
+                                    <img class="img-fluid project-image rounded shadow-sm" src="{% static 'assets/images/projects/eshopper.png' %}" alt="project name" />
+                                    </a>
+                                    
+                                </div>
+                                
+                                <h3 class="title mb-3"><a href="https://echopper.onrender.com/" target="_blank">EShopper - Ecommerce de ropa </a></h3>
+                                    
+                                <div class="desc text-start">                                    
+                                    <p>Dirigí un proyecto de desarrollo personal enfocado en crear un sitio web para una tienda de ropa. Diseñé y construí la plataforma, priorizando la navegación intuitiva y la presentación visual atractiva de los productos. Implementé un sistema de carrito de compras y pasarelas de pago seguras para garantizar una experiencia de compra sin problemas. El resultado es una tienda en línea atractiva y funcional que brinda a los clientes la comodidad de explorar y adquirir prendas de moda desde cualquier lugar.</p>
+                                </div><!--//desc-->         
+                                <a class="btn btn-cta-secondary" href="https://echopper.onrender.com/" target="_blank"><i class="fas fa-thumbs-up"></i> Ver</a>                 
+                            </div><!--//item-->
+
+
+                            <hr class="divider" />
+
+
+
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                
+                </section><!--//section-->
+               
+                
+                <section class="experience section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Experiencia Laboral</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Analista júnior de Recaudación - <span class="place"><a href="https://empresa.gamaenlinea.com/">Excelcior Gama</a></span> <span class="year">(2021 - 2022)</span></h3>
+                                <ul>
+                                    <li>Auditoria de Cuadre y caga</li>
+                                    <li>Contabilización de ventas</li>
+                                    <li>Revisión y supervisión de archivos financieros</li>
+                                    <li>depósito de valores</li>
+                                </ul>    
+                            </div><!--//item-->
+                            
+                            
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-lg-4 col-12">
+                 <aside class="info aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading sr-only">Informacion Basica</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Ubicación:</span>Caracas, Venezuela</li>
+                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="#">Jmlc452@gmail.com</a></li>
+                            </ul>
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//aside-->
+                
+                <aside class="skills aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Habilidades</h2>
+                        <div class="content">
+                            <div class="skillset">
+                               
+                                <div class="item">
+                                    <h3 class="level-title">Python &amp; Django<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+
+                                    <div class="level-bar progress">
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 96%" aria-valuenow="96"  aria-valuemin="0" aria-valuemax="96"></div>
+									</div><!--//level-bar-->                               
+                                </div><!--//item-->
+                              
+                                <div class="item">
+                                    <h3 class="level-title">HTML5, CSS3, SASS &amp; LESS<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+                                    <div class="level-bar progress">
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 93%" aria-valuenow="93"  aria-valuemin="0" aria-valuemax="96"></div>
+									</div><!--//level-bar-->                                  
+                                </div><!--//item-->
+                                
+                                <p><a class="more-link" href="https://github.com/jmlc452"><i class="fas fa-external-link-alt"></i>Mas en GitHub</a></p> 
+                            </div>              
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//section-->
+                
+                
+                
+                <aside class="education aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                            <div class="item">                      
+                                <h3 class="title"><i class="fas fa-graduation-cap"></i> Ingenieria Informatica</h3>
+                                <h4 class="university">Instituto Universitario de Tecnología y Administración IUTA <span class="year">(2022-2024)</span></h4>
+                            </div><!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                            
+                <aside class="languages aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Languajes</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li class="item">
+                                    <span class="title"><strong>English:</strong></span>
+                                    <span class="level">B1 <br class="visible-sm visible-xs"/> <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
+                                </li><!--//item-->
+                                <li class="item">
+                                    <span class="title"><strong>Español:</strong></span>
+                                    <span class="level">Nativo <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                </li><!--//item-->
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+                
+                
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+    
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="{% static 'assets/plugins/popper.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>    
+    <script type="text/javascript" src="{% static 'assets/plugins/vanilla-rss/dist/rss.global.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'assets/plugins/dark-mode-switch/dark-mode-switch.min.js' %}"></script> 
+    <!-- github calendar plugin -->
+    <script type="text/javascript" src="{% static 'assets/plugins/github-calendar/dist/github-calendar.min.js' %}"></script>
+    <!-- github activity plugin -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="{% static 'assets/plugins/github-activity/src/github-activity.js' %}"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>            
+</body>
+</html> 
+
