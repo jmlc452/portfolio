@@ -17,10 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app_index.views import index
-from app_contacto.views import contacto
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', index,name='inicio'),
-    path('contacto/', contacto,name='contacto'),
 ]
